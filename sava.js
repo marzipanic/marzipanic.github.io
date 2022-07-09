@@ -1,4 +1,4 @@
-var c = document.getElementById("myCanvas");
+var c = document.getElementById("sava-canvas");
 var ctx = c.getContext("2d");
 
 
