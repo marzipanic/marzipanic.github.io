@@ -1,34 +1,14 @@
 body {
     font-family: "EB Garamond", "Poiret One", helvetica, arial, sans-serif;
     margin: 2em;
-  }
-  
-  .token-container {
+}
+
+.token-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-  }
-  
-  [draggable] {
+}
+
+[draggable] {
     user-select: none;
-  }
-
-  .text {
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 15pt;
-    text-shadow: 0px 0px 2px $color-black-dark, 0px 0px 4px white;
-    position: absolute;
-    text-align: center;
-    top: 38px;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    z-index: 1;
-    transition: 1s ease-out;
-
-    &:hover {
-        transition: 1s ease-out;
-    }
 }
