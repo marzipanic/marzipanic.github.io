@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Bookinsanity";
+    font-weight: 200;
+    src: local(※), url("/fonts/Bookinsanity/Bookinsanity.otf") format("otf");
+  }
+@font-face {
+    font-family: "Nodesto Caps Condensed";
+    src: local(※), url("/fonts/Nodesto Caps Condensed/Nodesto Caps Condensed.otf") format("otf");
+}

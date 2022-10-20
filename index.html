@@ -1,46 +1,80 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Sava: A Traditional Ilythiir Game</title>
+<head>
+    <title>5E D&D TOOLS</title>
 	<meta charset="utf-8">
 
 	<!-- Styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Edu+SA+Beginner">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
-	<link rel="stylesheet" href="sava.css">
-	<link rel="stylesheet" href="token.css">
+    <style>
+        @font-face {
+            font-family: "Bookinsanity";
+            src: url("/fonts/Bookinsanity/Bookinsanity.otf");
+        }
+        @font-face {
+            font-family: "Nodesto Caps Condensed";
+            src: url("/fonts/Nodesto Caps Condensed/Nodesto Caps Condensed.otf");
+        }
+        @font-face {
+            font-family: "Scaly Sans";
+            src: url("/fonts/Scaly Sans/Scaly Sans.otf");
+        }
+        @font-face {
+            font-family: "Scaly Sans Caps";
+            src: url("/fonts/Scaly Sans Caps/Scaly Sans Caps.otf");
+        }
+    </style>
+	<link rel="stylesheet" href="style.css">
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="sava-board.js" defer></script>
 	<script type="text/javascript" src="drag-and-drop.js" defer></script>
 
-  </head>
-  <body>
-
-	<canvas id="sava-canvas">Your browser does not support the HTML5 canvas tag.</canvas>
-
-	<!-- TODO Create Red Token -->
-	<div class="token-container">
-		<div draggable="true"  id="cool-ilharess" class="token blue">
-			<span class="text">I</span>
-		</div>
-		<div draggable="true"  id="cool-yathrin" class="token blue">
-			<span class="text">Y</span>
-		</div>
-		<div draggable="true"  id="cool-faruk" class="token blue">
-			<span class="text">F</span>
-		</div>
-		<div draggable="true"  id="cool-sargtlin" class="token blue">
-			<span class="text">S</span>
-		</div>
-		<div draggable="true"  id="cool-gol" class="token blue">
-			<span class="text">G</span>
-		</div>
-	</div>
-
-  </body>
+</head>
+<body>
+    <section class="nav">
+        <h1>5E D&D TOOLS</h1>
+        <h3 class="span loader">
+            <span class="m">B</span>
+            <span class="m">Y</span>
+            <span class="m">&nbsp;</span>
+            <span class="m">M</span>
+            <span class="m">A</span>
+            <span class="m">R</span>
+            <span class="m">Z</span>
+            <span class="m">I</span>
+            <span class="m">P</span>
+            <span class="m">A</span>
+            <span class="m">N</span>
+            <span class="m">I</span>
+            <span class="m">C</span>
+        </h3>
+        <div class="nav-container">
+            <a class="nav-tab" href="#tab-deck-of-many">Deck of Many</a>
+            <a class="nav-tab" href="#tab-spirit-board">Spirit Board</a>
+            <a class="nav-tab" href="#tab-tarokka-deck">Tarokka Deck</a>
+            <a class="nav-tab" href="#tab-sava">Sava</a>
+            <span class="nav-tab-slider"></span>
+        </div>
+    </section>
+    <main class="main">
+        <section class="slider" id="tab-deck-of-many">
+            <a href="./tools/deck-of-many/index.html"><h1>Deck of Many Things</h1></a>
+            <h2>a mystical deck of 22 cards</h2>
+        </section>
+        <section class="slider" id="tab-tarokka-board">
+            <a href="./tools/spirit-board/index.html"><h1>Spirit Board</h1></a>
+            <h2>a mystical planchette and answer slate</h2>
+        </section>
+        <section class="slider" id="tab-tarokka-deck">
+            <a href="./tools/tarokka-deck/index.html"><h1>Tarokka Deck</h1></a>
+            <h2>a vistana fortune telling tool</h2>
+        </section>
+        <section class="slider" id="tab-sava">
+            <a href="./tools/sava/index.html"><h1>Sava Game</h1></a> 
+            <h2>a traditional drow strategy game</h2>
+        </section>
+    </main>
+    <canvas class="background">Your browser does not support the HTML5 canvas tag.</canvas>
+</body>
 </html>
+  
