@@ -1,0 +1,32 @@
+#modal-overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+  
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+  }
+
+  #modal-overlay #modal {
+    max-width: 650px;
+    width: 90%;
+    background: white;
+    height: 80%;
+    border-radius: 20px;
+ 
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+  }
+  
+  #modal-overlay #modal .modal-footer {
+    margin-top: auto;
+  }
+
+  .modal-content {
+    overflow: auto;
+}

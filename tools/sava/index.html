@@ -13,16 +13,160 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../tool-nav.css">
+	<link rel="stylesheet" href="../modal.css">
+
 	<!-- Scripts -->
+	<script type="text/javascript" src="../draggable.js" defer></script>
+	<script type="text/javascript" src="../modal.js" defer></script>
 	<script type="text/javascript" src="script.js" defer></script>
 
 </head>
 <body>
     <div class="nav">
       <a href="../../index.html"><h1>HOME</h1></a>
+	  <a onclick="resetTokens()"><h1>reset</h1></a>
+	  <a href="#" id="open-modal"><h1>rules</h1></a>
     </div>
     <div class="main">
-		<canvas id="sava-canvas">Your browser does not support the HTML5 canvas tag.</canvas>
+		<div class="sava-board">
+			<canvas id="sava-canvas">Your browser does not support the HTML5 canvas tag.</canvas>
+		</div>
+		<div class="sava-pieces">
+			<div class="hot">
+				<img id="hot-matron" class='token matron' src="./tokens/hot-matron.png">
+				<img id="hot-priestess-1" class='token priestess' src="./tokens/hot-priestess.png">
+				<img id="hot-priestess-2" class='token priestess' src="./tokens/hot-priestess.png">
+				<img id="hot-mage-1" class='token mage' src="./tokens/hot-mage.png">
+				<img id="hot-mage-2" class='token mage' src="./tokens/hot-mage.png">
+				<img id="hot-weapon-master-1" class='token weapon-master' src="./tokens/hot-weapon-master.png">
+				<img id="hot-weapon-master-2" class='token weapon-master' src="./tokens/hot-weapon-master.png">
+				<img id="hot-orc-1" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-2" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-3" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-4" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-5" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-6" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-7" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-8" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-9" class='token orc' src="./tokens/hot-orc.png">
+				<img id="hot-orc-10" class='token orc' src="./tokens/hot-orc.png">
+			</div>
+			<div class="cold">
+				<img id="cold-matron" class='token matron' src="./tokens/cold-matron.png">
+				<img id="cold-priestess-1" class='token priestess' src="./tokens/cold-priestess.png">
+				<img id="cold-priestess-2" class='token priestess' src="./tokens/cold-priestess.png">
+				<img id="cold-mage-1" class='token mage' src="./tokens/cold-mage.png">
+				<img id="cold-mage-2" class='token mage' src="./tokens/cold-mage.png">
+				<img id="cold-weapon-master-1" class='token weapon-master' src="./tokens/cold-weapon-master.png">
+				<img id="cold-weapon-master-2" class='token weapon-master' src="./tokens/cold-weapon-master.png">
+				<img id="cold-orc-1" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-2" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-3" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-4" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-5" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-6" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-7" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-8" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-9" class='token orc' src="./tokens/cold-orc.png">
+				<img id="cold-orc-10" class='token orc' src="./tokens/cold-orc.png">
+			</div>
+		</div>
 	</main>
+	<div id="modal-overlay">
+		<div id="modal">
+			<div class="modal-header">
+				<h1>RULES FOR SAVA</h1>
+			</div>
+			
+			<div class="modal-content rules">
+					<p>The goal of the game is to capture your opponent's Matron.</p>
+				</br></br>
+					<h2>Components</h2>
+					<p>The game includes the following elements:</p>
+					<ul>
+						<li>🕷️<strong>Sava Board:</strong> shaped similar a spiderweb</li>
+						<li>🎲<strong>Spider Bones:</strong> a pair of 8-sided ivory dice</li>
+						<li>♟️<strong>&nbsp;Player Tokens x2:</strong> including 1 Matron, 2 Priestesses, 2 Sorcerers, 2 Weapon Masters, and 10 Orcs</li>
+					</ul>
+				</br>
+					<h2>Movement and Capture</h2>
+					<p>Player tokens can move in the following ways.</p></br>
+				
+					<img class="token" src="./tokens/cold-matron.png"><img class="token" src="./tokens/hot-matron.png">
+					<p><strong>Matron Tokens</strong> move one space in any direction along any line</p></br>
+					
+					<img class="token" src="./tokens/cold-priestess.png"><img class="token" src="./tokens/hot-priestess.png">
+					<p><strong>Priestess Tokens</strong> move any number of unoccupied spaces along a line</p></br>
+
+					<img class="token" src="./tokens/cold-mage.png"><img class="token" src="./tokens/hot-mage.png">
+					<p><strong>Sorcerer Tokens</strong> move along three interconnected spaces; this move continues through occupied spaces and can change direction</p></br>
+
+					<img class="token" src="./tokens/cold-weapon-master.png"><img class="token" src="./tokens/hot-weapon-master.png">
+					<p><strong>Weapon Master Tokens</strong> make two moves along one interconnected space each; this allows for as many as two captures in one turn</p></br>
+
+					<img class="token" src="./tokens/cold-orc.png"><img class="token" src="./tokens/hot-orc.png">
+					<p><strong>Orc Tokens</strong> can move one space along a line if that direction leads directly to an enemy, with no allies in between</p></br>
+				</br>
+					<h2>Throwing the Spider Bones</h2>
+					<p>The chaotic nature of drow society is reflected in the game in the form of Spider Bones. Instead of moving a piece, a player may roll two special eight-sided dice during his turn. Each die has four blank faces and four faces with a spider symbol. If a player rolls "double spiders", he may move one of his opponent's pieces (the "traitor") as normal - orcs "traitors" treat both sides as hostile - beating the opponent's pieces as if the "traitor" were one of his pieces. The player cannot beat the Matron's Mother with a "traitor" - because the Matrons are all too well aware of the betrayals in their ranks to be surprised, although they themselves can be chosen as the "traitor".</p></br>
+					<p>After moving the traitor, the opponent's move follows as normal. The opponent cannot return the "traitor" to its previous position, although it may move it to a different square.</p></br>
+					<p>If a player rolls any result other than "double spiders", he surrenders his move that turn and the opponent's move.</p></br>
+					<p>Since the chance to throw "double spiders" is only one in four, many players avoid using them without unusual need (for example, to move or capture a piece that is checking Matron). Good players know, however, that it's better to use dice when a possible missed turn won't have much impact - at the beginning and middle of the game, rather than at the end. If there are more pieces of an opponent on the board, there is also a greater chance of confusing his ranks.</p></br>
+					<p>There is no limit to the number of dice rolls instead of moves, but it is considered vulgar to roll the dice before making at least two moves, and the culmination of everything is rolling them each turn. The drows may worship a chaotic Lloth, but they also know that the Spider Queen helps those who help themselves, rather than relying on luck. A player who never rolls dice may not be considered pious, so it is a good idea to roll them at least once per game.</p></br>
+				</br>
+					<h2>Resurrection</h2>
+					<p>If the orc moves the entire board to the promotion zone (nine spaces where the opponent started - for the red player these are: A1, A2, A3, AB1, AB2, AB3, B1, B2, B3; for the blue - E1, E2, E3, EF1, EF2, EF3, F1, F2, F3), it can be removed from the board and replaced with any [more important] piece of the given player, previously captured. If none of the player's [more important] pieces has been captured before, nothing happens. If a [more important] piece is captured after an orc has entered the promotion area, it must move to another space in that area to make the switch.</p></br>
+				</br>
+					<h2>Strategy and Tactics</h2>
+					<p>The Matron rarely has a chance to beat anything in the game. Its low range of movements makes it very vulnerable, so it must be protected from attacks by more mobile pieces. The Matron can easily be trapped by her own pieces, so she should be taken from the starting grid as soon as possible - this maneuver is not easy as it requires removing at least two orcs from the flank and takes up to eight moves. A threat from an enemy Sorcerer causes the player to leave a space around the Keeper at the start of the game so that she has an escape space if the Sorcerer attacks. If the Sorcerer is captured during the opening, an effective tactic may be to surround the Mother Keeper with other pieces to prevent the remaining opponent's forces from successfully attacking.</p></br>
+					<p>The Priestess is probably one of the strongest pieces in the game (when placed well, it can attack over 40% of the board from one field), but at the beginning of the game the orcs limit her ability to attack along the board. For this reason, many players keep it in stock until later in the game, when many orcs have already been killed; or they sacrifice the orcs so that the priestess could strike earlier.</p></br>
+					<p>Just like in life, with Sorcerers you have to think a few moves ahead. Their range and jump ability make them dangerous, but they cannot attack adjacent squares. They need to be well placed to use their talent to the full.</p></br>
+					<p>The Weapon Master is in his element when surrounded by enemies, because that's when his unique double-move is most effective. The Weapon Master is usually the first of the important pieces to fight the enemy and is often lost in the resulting skirmish. However, since the Weapon Master can take two of his opponent's pieces with him, it is a game worth the effort, especially if he captures his priestess.</p></br>
+					<p>Orcs are weak, and a clever opponent can use the principle of movement towards the opponent to dictate their moves or completely paralyze them. However, there are many more of them than the other pieces, they provide excellent defense and can be used in conjunction with a Mage or Weapon Master for deadly attacks on the opponent's Matron. They can also have a big impact when they occupy at least two of the four middle spaces on the board.</p></br>
+				</br>
+					<h2>Notation</h2>
+					<p>The board is divided into three rows (1, 2, 3) and four columns (AF, BE, CH, DG). There are also eight "invisible" columns (AB, BC, CD, DE, EF, FG, GH). The field is marked with a column first and then a row as shown below. The four middle boxes are an exception, they are marked by the intersecting columns (HA, BC, DE, FG).</p><br>
+					<p>The pieces have the following abbreviations:</p>
+					<ul>
+						<li><strong>M:</strong> Matron</li>
+						<li><strong>P:</strong> Priestess</li>
+						<li><strong>S:</strong> Sorcerer</li>
+						<li><strong>W:</strong> Weapon Master</li>
+						<li><strong>O:</strong> Orc</li>
+					</ul>
+					<p>Movement is marked as follows (piece) (target field), so KapFG3 means that the priestess is on the FG3 field. The exception is an orc whose move is marked as (starting field) (target field) - eg D3ED means that the orc from the D3 field made a move on ED. This prevents confusion if several orcs are allowed to move to the same field.</p><br>
+					<p>The capture is marked with "x", so WzH2x means that the wizard made a move to H2 and beat a piece there. In the case of the bladed master, the capture on the first move is marked with an "x" in front of the target square - so FechxAB2 means that the fencer made a move to AB2 and tapped a piece along the way (assuming he was starting from A1, he captured a piece on A2). The double capture would be FechxAB2x - the bladed master moved to AB2, capturing a piece on the way and a piece to AB2.</p><br>
+					<p>An orc entering an enemy base is marked as (orc move) (revived piece), so FG2F2Fech means that an orc has entered the promotion area and has been turned into a bladed master.</p><br>
+					<p>If a player chooses to use Spider Dice, it is marked with an asterisk. If a queue is dropped, nothing else is signed. However, if a player rolls "double spiders" and moves an opponent's piece, it is written after an asterisk, for example * D2D3x means that the player has rolled "double spiders" and moved the opponent's orc from D2 to D3, capturing a piece to D3.</p><br>
+				</br>
+					<h2>Cultural Traditions</h2>
+					<p>The Hot and Cold tokens respectively provide and negate heat, which makes them easy for Drow to see using their natural infravision.</p></br>
+					<p>The Spider Bones are an important element of the game as an homage to the Goddess Lolth, a cruel and chaotic spider-queen and matriarch. Because Lolth values cunning, it is considered vulgar to roll the bones before making at least two moves. Lolth also favors bold action; players who roll the bones at least once are considered pious, and whose who never do are seen as cowards.</p></br>
+					<p>Capturing the Matron with an Orc is considered a sign of a very talented sava player. Most often it is the result of the opponent's mistake, and then the winner (and possible observers) will mock the loser, ridicule their ineptitude, and sometimes inflict light stab wounds.</p></br>
+				</br>
+					<h2>Genesis</h2>
+					<p>The origin of the sava is shrouded in mystery. According to popular myth, it was given to the Ilythiiri race of the goddess Lloth as a way of learning the basics of drow society - betrayal, fate, cunning and careful planning. Most historians estimate its appearance shortly after the Sundering to be around –3000 DR, as there is no evidence of earlier games. As the Drow began a less expansionist and relatively more peaceful life, the increased leisure time of the nobility led to the development of sava as an entertainment. Since it is believed then and now to provide useful survival lessons, the Mother-Keepers of most clans allow the game, and some even encourage their subordinates to play it. She is considered an important part of the branch leader's education and was for a time part of religious rituals at Lloth Church in Sshamath.</p></br>
+					<p>Sava's popularity among the nobility has declined in recent centuries, partly due to the growing number of players from the lower strata of society. Since all it takes to play a good game is a clear mind and a bit of learning, many lower-class drows who have mastered the game have been able to defeat members of the noble houses. This state of affairs, unacceptable, commented Gromph Baenre after losing to a common soldier: "Losing [a game of sava] to you does not make me a worse Drow. But it makes me very, very bad," and turned the hapless victor into a mushroom.</p></br>
+					<p>As a result of its universality, sava has become less popular in the homes of the nobility, but this compensates for its prevalence in the rest of society. There are even a few non-drow players - Mage Elminster is known to be a skilled player - but few, if any, have ever played with a skilled drow master. This is partly due to the isolation of the drow and partly because the dark elves take great pride in their traditional game and whip or murder the representatives of the other races who play it.</p></br>
+					<p>Sava is deeply rooted in drow culture, and no non-drow can hope to understand its subtler aspects. Sava is an important amalgamation of drow society. Though they would never admit it, the fact that sava is available to everyone, rich and poor, is a unifying element in a very fragmented society. The drow world is said to be a world of chaos, betrayal, and disorder - ironically, a game that embodies these ideas can be the glue that keeps this world in one piece.</p></br>
+				</br>
+					<h2>Game Variants</h2>
+					<p><strong>Sava Baenre (popular in Menzoberranzan):</strong> Matron gains the range of moves of the priestess if the Priestess is beaten. Hitting the opponent's priestess therefore becomes very silly, except in special cases. The name is not related to the fact that the variant was invented or played in House of Baenre, which is better not to be spoken of when playing with First House.</p></br>
+					<p><strong>Sava Ched Nasad:</strong> the principle of promotion instead of resurrection. Orcs reaching the promotion zone can be promoted to more important pieces, even if none of them have previously been captured. In this way, there may be more priestesses, weapon masters, or sorcerers in play.</p></br>
+					<p><strong>Sava Champion (popular variant):</strong> adds an additional piece, a Champion that moves like a Priestess AND a Mage. The Champion starts in the first line - AB3 for the blue player and EF3 for the red player. Despite his impressive range of movements, the champion cannot capture or be captured, making him excellent for defense. In the Sava Champion Lloth variant, the Champion can capture or be captured when there are no other major pieces in play. This variant is still played in religious practice.</p></br>
+					<p><strong>Sava Great Wheel:</strong> played on a larger board, with an additional column (24 squares) at the edge. Two orcs are added, and one more important piece each. An additional field, labeled center, appears in the center and connects the HA, BC, DE, and FG fields. It is a promotion zone for both players. The Great Wheel is considered a novelty, and many drow do not take it seriously.</p></br>
+					<p><strong>Sava Bones:</strong> throwing one spider gives the traitor's normal move, and throwing two spiders allows you to remove the chosen opponent's piece from the board at once.</p></br>
+				</br>
+					<h2>Sources</h2>
+					<p><a href="https://forgottenrealms.fandom.com/wiki/Sava">Forgotten Realms Wiki: Sava</a></p>
+					<p><a href="http://www.dnd.kismetrose.com/">Kismet's Dungeons and Dragons</a></p>
+					<p><a href="https://gexe.pl/dom-yauntyrr/art/4377,sava">Polish Rules for Sava</a></p>
+			</div>
+		
+			<div class="modal-footer">
+				<h1 id="close-modal">close</h1>
+			</div>
+		</div>
+	<div>
 </body>
 </html>

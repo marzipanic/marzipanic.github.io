@@ -6,7 +6,6 @@
 .board {
   height: 1000px;
   width: 750px;
-  /* background-image: url("tarokka-board.webp"); */
   transition: 0.5s ease-in-out;
 }
 .planchette-wrap {
@@ -26,7 +25,4 @@
   position:absolute;
   height: 200px;
   width: 200px;
-}
-.planchette .side:nth-of-type(2) {
-  transform: translateX(-50%) rotate(25.5deg);
 }

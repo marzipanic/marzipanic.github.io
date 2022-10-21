@@ -1,0 +1,85 @@
+.sava-board {
+    position: absolute;
+    z-index: 0;
+}
+
+.sava-pieces {
+    position: absolute;
+    margin: 10px;
+    z-index: 1;
+}
+
+.sava-pieces .hot {
+    position: absolute;
+    z-index: 2;
+}
+
+.hot .matron {
+    filter: drop-shadow(0px 0px 10px #dd4444);
+}
+
+.hot .priestess,
+.hot .mage,
+.hot .weapon-master {
+    filter: drop-shadow(0px 0px 5px #dd4444);
+}
+
+.sava-pieces .cold {
+    position: absolute;
+    z-index: 2;
+}
+
+.cold .matron {
+    filter: drop-shadow(0px 0px 10px #4444dd);
+}
+
+.cold .priestess,
+.cold .mage,
+.cold .weapon-master {
+    filter: drop-shadow(0px 0px 5px #4444dd);
+}
+
+.token {
+    height: 3.5rem;
+    width: 3.5rem;
+    animation: hop 5s infinite;
+}
+
+.token:hover {
+    animation: shake 0.80s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+@keyframes hop {
+    20%, 40%, 60%, 80%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    30% {
+        transform: translate3d(0, 2px, 0);
+    }
+
+    70%, 90% {
+        transform: translate3d(0, 1px, 0);
+    }
+}

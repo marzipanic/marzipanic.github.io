@@ -1,10 +1,3 @@
-/* Credit and Thanks:
-Matrix - Particles.js;
-SliderJS - Ettrics;
-Design - Sara Mazal Web;
-Fonts - Google Fonts
-*/
-
 window.onload = function () {
     Particles.init({
       selector: ".background"
@@ -133,10 +126,4 @@ window.onload = function () {
   }
   
   new NavigationPage();
-  /* Credit and Thanks:
-  Matrix - Particles.js;
-  SliderJS - Ettrics;
-  Design - Sara Mazal Web;
-  Fonts - Google Fonts
-  */
   
