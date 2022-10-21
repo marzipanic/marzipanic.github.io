@@ -231,7 +231,6 @@ function resetTokens() {
     const rect = c.getBoundingClientRect();
     const centerX = window.scrollX - 30;
     const centerY = rect.top + window.scrollY;
-    console.log(`${centerX}, ${centerY}`);
     let currentX;
     let currentY;
     let position;
@@ -253,7 +252,6 @@ function resetTokens() {
 
 // Apply any Token Styles, Animations, Positioning
 function setTokenStyle(tokenId, x, y) {
-    console.log(tokenId);
     let selectedToken = document.getElementById(tokenId);
     selectedToken.style.position = 'absolute';
     selectedToken.style.left = `${x}px`;
