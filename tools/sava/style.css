@@ -3,15 +3,49 @@
     z-index: 0;
 }
 
+.sava-dice {
+    z-index: 4;
+    height: 200px;
+    width: 100px;
+}
+
+.sava-dice .die {
+    display: grid;
+    justify-content: center;
+}
+
+.die-image,
+.die-text {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.die-image img {
+    width: 100px;
+    height: 100px;
+}
+
+.die-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#die1, #die2 {
+    z-index: 5;
+    top: -20%;
+    color: antiquewhite;
+}
+
 .sava-pieces {
     position: absolute;
     margin: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sava-pieces .hot {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hot .matron {
@@ -26,7 +60,7 @@
 
 .sava-pieces .cold {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 .cold .matron {

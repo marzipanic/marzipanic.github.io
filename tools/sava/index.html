@@ -11,21 +11,39 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../tool-nav.css">
 	<link rel="stylesheet" href="../modal.css">
+	<link rel="stylesheet" href="style.css">
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="../draggable.js" defer></script>
 	<script type="text/javascript" src="../modal.js" defer></script>
-	<script type="text/javascript" src="script.js" defer></script>
-
+	<script type="text/javascript" src="./script.js" defer></script>
 </head>
 <body>
     <div class="nav">
       <a href="../../index.html"><h1>HOME</h1></a>
-	  <a onclick="resetTokens()"><h1>reset</h1></a>
 	  <a href="#" id="open-modal"><h1>rules</h1></a>
+	  <a onclick="resetTokens()"><h1>reset</h1></a>
+	  <a onclick="rollDice()"><h1>roll</h1></a>
+	  <div class="sava-dice">
+		<div class="die">
+			<div class="die-image">
+				<img src="./d8.png">
+			</div>
+			<div class="die-text">
+				<h2 id="die1">8</h2>
+			</div>
+		</div>
+		<div class="die">
+			<div class="die-image">
+				<img src="./d8.png">
+			</div>
+			<div class="die-text">
+				<h2 id="die2">8</h2>
+			</div>
+		</div>
+	</div>
     </div>
     <div class="main">
 		<div class="sava-board">

@@ -2,12 +2,12 @@
 @font-face {
   font-family: "Bookinsanity";
   font-weight: 100;
-  src: url("./fonts/Bookinsanity/Bookinsanity.woff") format("woff");
+  src: url("../fonts/Bookinsanity/Bookinsanity.woff") format("woff");
 }
 @font-face {
   font-family: "Nodesto Caps Condensed";
   font-weight: 100;
-  src: url("./fonts/Nodesto Caps Condensed/Nodesto Caps Condensed.woff") format("woff");
+  src: url("../fonts/Nodesto Caps Condensed/Nodesto Caps Condensed.woff") format("woff");
 }
 * {
   margin: 0;

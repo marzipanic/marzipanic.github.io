@@ -273,3 +273,10 @@ function getRotatedXY(centerX, centerY, currentX, currentY, angle) {
 };
 
 
+// --------------------------------------
+// ROLL DICE
+function rollDice() {
+    document.getElementById("die1").textContent = `${Math.floor(Math.random() * 8) + 1}`;
+    document.getElementById("die2").textContent = `${Math.floor(Math.random() * 8) + 1}`;
+}
+
