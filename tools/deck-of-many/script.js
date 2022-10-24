@@ -2,6 +2,7 @@
 // CONSTANTS AND VARIABLES
 const CARD_DISPLAY_ELEMENT = document.getElementById('card-display');
 const CARD_IMAGE_ELEMENT = document.getElementById('card-image');
+
 const TEXT_DISPLAY_ELEMENT = document.getElementById('text-display');
 const CARD_TITLE_ELEMENT = document.getElementById('card-title');
 const CARD_DESCRIPTION_ELEMENT = document.getElementById('card-description');
@@ -148,9 +149,9 @@ function selectCard() {
 // SHOW CARD
 function showCard(index) {
     // Hide Card & Text
-    if (!(index===0)) {
-        animateHideCard(index);
-    }
+    // if (!(index===0)) {
+    //     animateHideCard();
+    // }
 
     // Set the Text
     CARD_TITLE_ELEMENT.textContent = cards[index].title;
@@ -161,7 +162,7 @@ function showCard(index) {
     CARD_IMAGE_ELEMENT.setAttribute('src', cardImage);
 
     // Show Card & Text
-    animateShowCard(index);
+    animateShowCard();
     
 };
 
@@ -172,20 +173,34 @@ function animateHideCard() {
     // Handle Card
     let cClasses = CARD_DISPLAY_ELEMENT.classList;
     if (cClasses.contains("scaled-up")) {
-        cClasses.remove("scaled-up");
+        cClasses.replace("scaled-up", "tossed-down");
     }
     if (!cClasses.contains("tossed-down")) {
         cClasses.add("tossed-down");
     }
 
     // Handle Text
-    let tClasses = TEXT_DISPLAY_ELEMENT.classList;
-    if (tClasses.contains("scaled-up")) {
-        tClasses.remove("scaled-up");
+    let tdClasses = TEXT_DISPLAY_ELEMENT.classList;
+    if (tdClasses.contains("scaled-up")) {
+        tdClasses.replace("scaled-up", "scaled-down");
     }
-    if (!tClasses.contains("scaled-down")) {
-        tClasses.add("scaled-down");
+    if (!tdClasses.contains("scaled-down")) {
+        tdClasses.add("scaled-down");
     }
+    // let tClasses = CARD_TITLE_ELEMENT.classList;
+    // if (tClasses.contains("scaled-up")) {
+    //     tClasses.replace("scaled-down", "scaled-up");
+    // }
+    // if (!tClasses.contains("scaled-down")) {
+    //     tClasses.add("scaled-down");
+    // }
+    // let dClasses = CARD_DESCRIPTION_ELEMENT.classList;
+    // if (dClasses.contains("scaled-up")) {
+    //     dClasses.replace("scaled-down", "scaled-up");
+    // }
+    // if (!dClasses.contains("scaled-down")) {
+    //     dClasses.add("scaled-down");
+    // }
 };
 
 // -----------------------------------------------------------------------
@@ -194,20 +209,34 @@ function animateShowCard() {
     // Handle Card
     let cClasses = CARD_DISPLAY_ELEMENT.classList;
     if (cClasses.contains("tossed-down")) {
-        cClasses.remove("tossed-down");
+        cClasses.replace("tossed-down", "scaled-up");
     }
     if (!cClasses.contains("scaled-up")) {
         cClasses.add("scaled-up");
     }
 
     // Handle Text
-    let tClasses = TEXT_DISPLAY_ELEMENT.classList;
-    if (tClasses.contains("scaled-down")) {
-        tClasses.remove("scaled-down");
+    let tdClasses = TEXT_DISPLAY_ELEMENT.classList;
+    if (tdClasses.contains("tossed-down")) {
+        tdClasses.replace("tossed-down", "scaled-up");
     }
-    if (!tClasses.contains("scaled-up")) {
-        tClasses.add("scaled-up");
+    if (!tdClasses.contains("scaled-up")) {
+        tdClasses.add("scaled-up");
     }
+    // let tClasses = CARD_TITLE_ELEMENT.classList;
+    // if (tClasses.contains("scaled-down")) {
+    //     tClasses.replace("scaled-down", "scaled-up");
+    // }
+    // if (!tClasses.contains("scaled-up")) {
+    //     tClasses.add("scaled-up");
+    // }
+    // let dClasses = CARD_DESCRIPTION_ELEMENT.classList;
+    // if (dClasses.contains("scaled-down")) {
+    //     dtClasses.replace("scaled-down", "scaled-up");
+    // }
+    // if (!dClasses.contains("scaled-up")) {
+    //     tClasses.add("scaled-up");
+    // }
 };
 
 // -----------------------------------------------------------------------
