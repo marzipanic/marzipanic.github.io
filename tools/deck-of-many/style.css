@@ -32,7 +32,7 @@
     border-radius: 10px;
     color: rgb(201, 178, 101);
 
-    background: linear-gradient(-45deg, #460200, #110e0a);
+    background: linear-gradient(-45deg, #801512, #110e0a);
     background-size: 400% 400%;
     /* animation: gradient 5s ease infinite; */
 }
@@ -50,13 +50,6 @@
 #ddb-link {
     color: #d1000a;
 }
-
-/* body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-} */
 
 /* GRADIENT ANIMATION */
 @keyframes gradient {
@@ -87,7 +80,7 @@
     to { -webkit-transform: scale(1); } 
 }
 
-@keyframes scaled-down { 
+/* @keyframes scaled-down { 
     from { -webkit-transform: scale(1); } 
     to { -webkit-transform: scale(0); } 
 }
@@ -95,4 +88,4 @@
 @keyframes tossed-down {
     from { -webkit-transform: rotateX(0deg); }
     to { -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(500px) rotate(180deg); -webkit-animation-duration: 30s; }
-}
+} */
