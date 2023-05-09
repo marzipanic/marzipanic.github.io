@@ -1,5 +1,6 @@
 // -----------------------------------------------------------------------
 // CONSTANTS AND VARIABLES
+const ELEMENT_WRAPPER = document.getElementById('card-wrapper');
 const ELEMENT_CARD = document.getElementById('card');
 const ELEMENT_CARD_IMAGE = document.getElementById('image');
 const ELEMENT_CARD_FRONT = document.getElementById('front');
@@ -53,7 +54,7 @@ const cards = {
         title: "Flames",
         image_vyseri: "vyseri/deck21.png",
         image_marzipanic: "Flames_sm.png",
-        description: "A powerful devil becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies."
+        description: "A powerful <a href=\"https://www.dndbeyond.com/monsters?filter-type=0&filter-type=9&filter-search=&filter-cr-min=&filter-cr-max=&filter-armor-class-min=&filter-armor-class-max=&filter-average-hp-min=&filter-average-hp-max=&filter-is-legendary=&filter-is-mythic=&filter-has-lair=&filter-tags=58&sort=cr\" target=\"_blank\">devil</a> becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies."
     },
     7: {
         title: "Fool",
@@ -83,7 +84,7 @@ const cards = {
         title: "Key",
         image_vyseri: "vyseri/deck8.png",
         image_marzipanic: "Key_sm.png",
-        description: "A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon."
+        description: "A rare or rarer <a href=\"https://www.dndbeyond.com/magic-items?filter-type=0&filter-type=9&filter-search=&filter-rarity=3&filter-rarity=4&filter-rarity=5&filter-rarity=7&filter-requires-attunement=&filter-effect-type=&filter-effect-subtype=&filter-has-charges=\" target=\"_blank\">magic weapon</a> with which you are proficient appears in your hands. The GM chooses the weapon."
     },
     12: {
         title: "Knight",
@@ -95,13 +96,13 @@ const cards = {
         title: "Moon",
         image_vyseri: "vyseri/deck9.png",
         image_marzipanic: "Moon_sm.png",
-        description: "You are granted the ability to cast the wish spell 1d3 times."
+        description: "You are granted the ability to cast the <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell 1d3 times."
     },
     14: {
         title: "Rogue",
         image_vyseri: "vyseri/deck22.png",
         image_marzipanic: "Rogue_sm.png",
-        description: "A nonplayer character of the GM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a wish spell or divine intervention can end the NPC's hostility toward you."
+        description: "A nonplayer character of the GM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell or divine intervention can end the NPC's hostility toward you."
     },
     15: {
         title: "Ruin",
@@ -113,7 +114,7 @@ const cards = {
         title: "Skull",
         image_vyseri: "vyseri/deck10.png",
         image_marzipanic: "Skull_sm.png",
-        description: "You summon an avatar of death--a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the GM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life."
+        description: "You summon an <a href=\"https://www.dndbeyond.com/monsters/27734-avatar-of-death\" target=\"_blank\">avatar of death</a>--a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the GM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life."
     },
     17: {
         title: "Star",
@@ -125,7 +126,7 @@ const cards = {
         title: "Sun",
         image_vyseri: "vyseri/deck6.png",
         image_marzipanic: "Sun_sm.png",
-        description: "You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands."
+        description: "You gain 50,000 XP, and a <a href=\"https://www.dndbeyond.com/magic-items?filter-type=10\" target=\"_blank\">wondrous item</a> (which the GM determines randomly) appears in your hands."
     },
     19: {
         title: "Talons",
@@ -137,7 +138,7 @@ const cards = {
         title: "Throne",
         image_vyseri: "vyseri/deck16.png",
         image_marzipanic: "Throne_sm.png",
-        description: "You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours."
+        description: "You gain proficiency in the <a href=\"https://www.dndbeyond.com/sources/basic-rules/using-ability-scores#Persuasion\" target=\"_blank\">Persuasion</a> skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours."
     },
     21: {
         title: "Vizier",
@@ -149,7 +150,7 @@ const cards = {
         title: "The Void",
         image_vyseri: "vyseri/deck18.png",
         image_marzipanic: "Void_sm.png",
-        description: "This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A wish spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
+        description: "This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is <a href=\"https://www.dndbeyond.com/sources/phb/appendix-a-conditions#Incapacitated\" target=\"_blank\">incapacitated</a>. A <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
     }
 };
 
@@ -157,7 +158,6 @@ const cards = {
 // SHOW SELECTION
 function drawCard(event) {
     console.log("DRAW CARD");
-    // event.preventDefault();
 
     const savedCard = getSavedCard();
     let selectedCard = getSavedCard();
@@ -176,7 +176,7 @@ function animateDrawCard(index) {
 
     // Set the Text
     ELEMENT_CARD_TITLE.textContent = cards[index].title;
-    ELEMENT_CARD_DESCRIPTION.textContent = cards[index].description;
+    ELEMENT_CARD_DESCRIPTION.innerHTML = cards[index].description;
 
     // Set the Image
     let cardImage = `./cards/${cards[index].image_marzipanic}`;

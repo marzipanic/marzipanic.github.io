@@ -9,19 +9,13 @@
     --card-width: calc(var(--card-height) / 1.5);
 }
 
-body {
-    background-image: url(../../assets/images/tessellation.jpg);
-    /* height: 200vh;
-    width: 200vw; */
-}
-
 #card-wrapper {
     display: flex;
     position: absolute;
     top: 35%;
     left: 50%;
-    width: 250px;
-    height: 430px;
+    width: 314px;
+    height: 470px;
     margin: -150px;
     float: left;
     perspective: 500px;
@@ -133,6 +127,10 @@ body {
     font-family: "Merriweather", sans-serif;
     font-size: .9rem;
     /* letter-spacing: 0.25rem; */
+}
+
+#description a {
+    color: #ff0000;
 }
 
 #ddb-link {
