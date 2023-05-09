@@ -19,17 +19,20 @@
         <!-- <a href="#" id="open-modal"><h1>about</h1></a> -->
         <a onclick="showCard(0)"><h1>reset</h1></a>
     </div>
-    <div id="card-table">
-      <div id="card">
-        <div id="card-display" onclick="selectCard()">
-            <img id="card-image" src="./cards/deck00.png">
-        </div>
-        <div id="text-display">
-            <h2 class="title" id="card-title"></h2>
-            </br>
-            <span class="description" id="card-description"></span>
-            </br>
-            <p class="small"><a id="ddb-link" href="https://www.dndbeyond.com/magic-items/4617-deck-of-many-things">Deck of Many Things (5E D&D)</a></p>
+    <div id="card-wrapper">
+        <div id="card" onclick="drawCard()">
+            <div id="front" onclick="drawCard()">
+                <img id="image" src="./cards/Back_sm.png">
+            </div>
+            <div id="back" onclick="drawCard()">
+                <!-- <div id="card-contents" onclick="drawCard()"> -->
+                    <h2 id="title"></h2>
+                    </br>
+                    <span id="description"></span>
+                    </br>
+                    <a id="ddb-link" href="https://www.dndbeyond.com/magic-items/4617-deck-of-many-things">Deck of Many Things</a>
+                </div>
+            <!-- </div> -->
         </div>
     </div>
 </body>
