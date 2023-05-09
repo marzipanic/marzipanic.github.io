@@ -36,7 +36,7 @@ const cards = {
         title: "Donjon",
         image_vyseri: "vyseri/deck19.png",
         image_marzipanic: "Donjon_sm.png",
-        description: "You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared. You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a wish spell can reveal the location of your prison. You draw no more cards."
+        description: "You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared.<br/><br/>You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell can reveal the location of your prison. You draw no more cards."
     },
     4: {
         title: "Euryale",
@@ -84,7 +84,7 @@ const cards = {
         title: "Key",
         image_vyseri: "vyseri/deck8.png",
         image_marzipanic: "Key_sm.png",
-        description: "A rare or rarer <a href=\"https://www.dndbeyond.com/magic-items?filter-type=0&filter-type=9&filter-search=&filter-rarity=3&filter-rarity=4&filter-rarity=5&filter-rarity=7&filter-requires-attunement=&filter-effect-type=&filter-effect-subtype=&filter-has-charges=\" target=\"_blank\">magic weapon</a> with which you are proficient appears in your hands. The GM chooses the weapon."
+        description: "A rare or rarer <a href=\"https://www.dndbeyond.com/magic-items?filter-type=0&filter-type=9&filter-rarity=3&filter-rarity=4&filter-rarity=5&filter-rarity=7\" target=\"_blank\">magic weapon</a> with which you are proficient appears in your hands. The GM chooses the weapon."
     },
     12: {
         title: "Knight",
@@ -114,7 +114,7 @@ const cards = {
         title: "Skull",
         image_vyseri: "vyseri/deck10.png",
         image_marzipanic: "Skull_sm.png",
-        description: "You summon an <a href=\"https://www.dndbeyond.com/monsters/27734-avatar-of-death\" target=\"_blank\">avatar of death</a>--a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the GM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life."
+        description: "You summon an <a href=\"https://www.dndbeyond.com/monsters/27734-avatar-of-death\" target=\"_blank\">avatar of death</a>--a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the GM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears.<br/><br/>If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life."
     },
     17: {
         title: "Star",
@@ -150,7 +150,7 @@ const cards = {
         title: "The Void",
         image_vyseri: "vyseri/deck18.png",
         image_marzipanic: "Void_sm.png",
-        description: "This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is <a href=\"https://www.dndbeyond.com/sources/phb/appendix-a-conditions#Incapacitated\" target=\"_blank\">incapacitated</a>. A <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
+        description: "This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is <a href=\"https://www.dndbeyond.com/sources/phb/appendix-a-conditions#Incapacitated\" target=\"_blank\">incapacitated</a>.<br/><br/>A <a href=\"https://www.dndbeyond.com/spells/wish\" target=\"_blank\">wish</a> spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
     }
 };
 
