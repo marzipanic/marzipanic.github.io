@@ -209,7 +209,6 @@ function animateHideCard() {
     //     tdClasses.add("scaled-down");
     // }
 
-
     // let tClasses = CARD_TITLE_ELEMENT.classList;
     // if (tClasses.contains("scaled-up")) {
     //     tClasses.replace("scaled-down", "scaled-up");
@@ -247,7 +246,6 @@ function animateShowCard() {
     //     tdClasses.add("scaled-up");
     // }
 
-
     // let tClasses = CARD_TITLE_ELEMENT.classList;
     // if (tClasses.contains("scaled-down")) {
     //     tClasses.replace("scaled-down", "scaled-up");
@@ -275,6 +273,24 @@ function saveSelectedCard(selectedCard) {
 function getSavedCard() {
     let storedCard = localStorage.getItem(STORED_CARD_TOKEN);
     return (storedCard > 0 && storedCard <= 22) ? storedCard : 0;
+};
+
+// -----------------------------------------------------------------------
+// Function to Pin Card
+function pinCard() {
+
+};
+
+// -----------------------------------------------------------------------
+// Function to Deal Card
+function dealCard() {
+
+};
+
+// -----------------------------------------------------------------------
+// Initialize the Page
+function copyCard() {
+    navigator.clipboard.writeText(ELEMENT_CARD_TITLE.textContent + ": " + ELEMENT_CARD_DESCRIPTION.textContent);
 };
 
 // -----------------------------------------------------------------------

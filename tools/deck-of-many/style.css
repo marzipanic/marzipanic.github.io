@@ -1,38 +1,80 @@
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
-    inherits: false;
-  }
+    inherits: false;}
   
 :root {
     --card-height: 65vh;
     --card-width: calc(var(--card-height) / 1.5);
 }
 
-#card-wrapper {
+a {
+    color: #ff0000;
+}
+
+#wrapper {
     display: flex;
     position: absolute;
+    justify-content: space-between;
     top: 35%;
     left: 50%;
-    width: 300px;
+    width: 450px;
     height: 450px;
-    margin: -150px;
+    margin: -200px;
     float: left;
     perspective: 500px;
 }
 
+#control-wrapper, #hand-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    /* height: 450px; */
+    /* margin: -150px; */
+    /* float: left; */
+    perspective: 500px;
+}
+
+.control, .hand-card {
+    color: red;
+    font-family: "Nodesto Caps Condensed", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.control:hover, .hand-card:hover {
+    color: #fdec6e;
+    text-shadow:0px 0px 10px #fdec6e;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
+
+
+
+/* #hand-wrapper {
+    display: flex;
+    flex-direction: column;
+    perspective: 500px;
+} */
+
+#card-wrapper {
+    display: flex;
+    /* position: absolute; */
+    width: 300px;
+    height: 450px;
+}
+
 #card {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 450px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-
     transition: transform 1s;
     transform-style: preserve-3d;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 #card::before {
@@ -97,18 +139,9 @@
 #back {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* width: 250px;
-    height: 430px; */
     padding: 25px;
-    /* border-radius: 10px; */
-
     background: linear-gradient(-180deg, #6a0303, #110e0a);
-    /* background-size: 400% 400%; */
-    color: #ffdc69;
     transform: rotateY( 180deg );
-    /* animation: gradient 5s ease infinite; */
 }
 
 #image {
@@ -120,17 +153,11 @@
 #title {
     top: 5%;
     font-family: "Nodesto Caps Condensed", sans-serif;
-    /* letter-spacing: 0.25rem; */
+    color: #ffb95d;
 }
 
 #description {
-    font-family: "Merriweather", sans-serif;
-    font-size: .9rem;
-    /* letter-spacing: 0.25rem; */
-}
-
-#description a {
-    color: #ff0000;
+    color: #ffb95d;
 }
 
 #ddb-link {
@@ -174,11 +201,13 @@
 }
 .tossed-down { 
     -webkit-animation-name: tossed-down; 
-    -webkit-animation-duration: 3s; 
+    -webkit-animation-delay: 2s;
+    /* -webkit-animation-duration: 3s;  */
     -webkit-animation-iteration-count: 1; 
     /* -webkit-transform: scale(0);  */
     animation-name: tossed-down; 
-    animation-duration: 3s; 
+    animation-delay: 2s;
+    /* animation-duration: 3s;  */
     animation-iteration-count: 1; 
     /* transform: scale(0);  */
 }
@@ -202,4 +231,9 @@
 @keyframes tossed-down {
     from { -webkit-transform: rotateX(0deg); }
     to { -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(500px) rotate(180deg); -webkit-animation-duration: 30s; }
+}
+
+.small {
+    font-family: "Merriweather", sans-serif;
+    font-size: .9rem;
 }
