@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "Bookinsanity";
+    font-family: "Merriweather";
     font-weight: 100;
-    src: url("./fonts/Bookinsanity/Bookinsanity.woff") format("woff");
+    src: url("./fonts/Merriweather/Merriweather-Regular.ttf") format("ttf");
 }
 @font-face {
     font-family: "Nodesto Caps Condensed";
@@ -15,7 +15,7 @@
   }
   
   body {
-    font-family: "Bookinsanity", sans-serif;
+    font-family: "Merriweather", sans-serif;
   }
   .nav,
   .slider {
@@ -48,7 +48,7 @@
   .slider h2 {
     font-size: 2rem;
     letter-spacing: 0.3rem;
-    font-family: "Bookinsanity", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-weight: 300;
     color: #faebd7;
     z-index: 4;
@@ -56,7 +56,7 @@
   h3.span {
     font-size: 1rem;
     letter-spacing: 0.7em;
-    font-family: "Bookinsanity", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-weight: 100;
     color: #faebd7;
     z-index: 4;

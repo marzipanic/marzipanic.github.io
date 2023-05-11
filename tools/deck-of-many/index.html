@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../tool-nav.css">
 	<link rel="stylesheet" href="../modal.css">
 	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="number-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Scripts -->
@@ -21,32 +22,80 @@
     </div>
     <div id="wrapper">
         <div id="control-wrapper">
-            <div id="pin-card" class="control" onclick="pinCard()">
-                <i class="fa-solid fa-thumbtack"></i>
-            </div>
-            <div id="deal-card" class="control" onclick="dealCard()">
+            <div id="control-draw" class="control" onclick="drawCard()">
                 <i class="fa-solid fa-hand"></i>
+                <span>Draw</span>
             </div>
-            <div id="copy-card" class="control" onclick="copyCard()">
+            <div id="control-flip" class="control" onclick="flipCard()">
+                <i class="fa-solid fa-rotate"></i>
+                <span>Flip</span>
+            </div>
+            <div id="control-pin" class="control" onclick="pinCard()">
+                <i class="fa-solid fa-thumbtack"></i>
+                <span>Pin</span>
+            </div>
+            <div id="control-copy" class="control" onclick="copyCard()">
                 <i class="fa-regular fa-copy"></i>
+                <span>Copy</span>
             </div>
         </div>
         <div id="card-wrapper">
-            <div id="card" onclick="drawCard()">
-                <div id="front" onclick="drawCard()">
+            <!-- <div id="draw-prompt" class="form-group">
+                <form>
+                    <label for="draw-prompt">How many cards will you draw?</label>
+                    <div class="container">
+                        <div id="js-number-slider" class="number-slider-wrapper swiper-container">
+                            <span class="number-slider-indicator"></span>
+                            <div class="swiper-wrapper number-slider">
+                                <div class="number-slider-item swiper-slide"><span>1</span></div>
+                                <div class="number-slider-item swiper-slide"><span>2</span></div>
+                                <div class="number-slider-item swiper-slide"><span>3</span></div>
+                                <div class="number-slider-item swiper-slide"><span>4</span></div>
+                                <div class="number-slider-item swiper-slide"><span>5</span></div>
+                                <div class="number-slider-item swiper-slide"><span>6</span></div>
+                                <div class="number-slider-item swiper-slide"><span>7</span></div>
+                                <div class="number-slider-item swiper-slide"><span>8</span></div>
+                                <div class="number-slider-item swiper-slide"><span>9</span></div>
+                                <div class="number-slider-item swiper-slide"><span>10</span></div>
+                                <div class="number-slider-item swiper-slide"><span>11</span></div>
+                                <div class="number-slider-item swiper-slide"><span>12</span></div>
+                                <div class="number-slider-item swiper-slide"><span>13</span></div>
+                                <div class="number-slider-item swiper-slide"><span>14</span></div>
+                                <div class="number-slider-item swiper-slide"><span>15</span></div>
+                                <div class="number-slider-item swiper-slide"><span>16</span></div>
+                                <div class="number-slider-item swiper-slide"><span>17</span></div>
+                                <div class="number-slider-item swiper-slide"><span>18</span></div>
+                                <div class="number-slider-item swiper-slide"><span>19</span></div>
+                                <div class="number-slider-item swiper-slide"><span>20</span></div>
+                                <div class="number-slider-item swiper-slide"><span>21</span></div>
+                                <div class="number-slider-item swiper-slide"><span>22</span></div>
+                            </div>
+                        </div>
+                        <button type="submit" onclick="drawCard()">Seal my Fate</button>
+                    </div>
+                </form>
+            </div> -->
+            <div id="card">
+                <div id="front">
                     <img id="image" src="./cards/Back_sm.png">
                 </div>
-                <div id="back" onclick="drawCard()">
-                        <h2 id="title"></h2>
-                        </br>
-                        <span id="description" class="small"></span>
-                        </br>
-                        <a id="ddb-link" href="https://www.dndbeyond.com/magic-items/4617-deck-of-many-things">Deck of Many Things</a>
-                    </div>
+                <div id="back">
+                    <h2 id="title"></h2>
+                    </br>
+                    <span id="description" class="small"></span>
+                    </br>
+                    <a id="ddb-link" href="https://www.dndbeyond.com/magic-items/4617-deck-of-many-things">Deck of Many Things</a>
+                </div>
             </div>
         </div>
         <div id="hand-wrapper">
-            <div class="hand-card">
+            <ul id="hand-list">
+                <li id="1" class="hand-card" data-pos="1" >1</li>
+                <li id="2" class="hand-card" data-pos="2" >2</li>
+                <li id="3" class="hand-card" data-pos="3" >3</li>
+                <li id="4" class="hand-card" data-pos="4" >4</li>
+              </ul>
+            <!-- <div class="hand-card">
                 <span id="Euryale">Euryale</span>
             </div>
             <div class="hand-card">
@@ -54,7 +103,7 @@
             </div>
             <div class="hand-card">
                 <span id="Balance">Balance</span>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

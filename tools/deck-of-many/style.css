@@ -39,12 +39,19 @@ a {
 
 .control, .hand-card {
     color: red;
+    display: flex;
+    flex-direction: column;
     font-family: "Nodesto Caps Condensed", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
-.control:hover, .hand-card:hover {
+.control > i, .control > span {
+    align-self: center;
+}
+
+.control:hover,
+.hand-card:hover {
     color: #fdec6e;
     text-shadow:0px 0px 10px #fdec6e;
     -moz-transition: all 0.15s ease-in;
@@ -53,17 +60,18 @@ a {
     transition: all 0.15s ease-in;
 }
 
-
-
-/* #hand-wrapper {
-    display: flex;
-    flex-direction: column;
-    perspective: 500px;
-} */
+.control:active,
+.hand-card:active {
+    color: #fdae6e;
+    text-shadow:0px 0px 10px #fdae6e;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
 
 #card-wrapper {
     display: flex;
-    /* position: absolute; */
     width: 300px;
     height: 450px;
 }
@@ -89,20 +97,18 @@ a {
       z-index: -1;
       top: -1%;
       left: -2%;
-      animation: spin 2.5s linear infinite;
+      /* animation: spin 2.5s linear infinite; */
   }
 
  #card-wrapper::after {
     position: absolute;
     content: "";
-    /* top: calc(var(--card-height) / 10); */
     left: 0;
     right: 0;
     z-index: -1;
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    /* transform: scale(0.8); */
     filter: blur(calc(var(--card-height) / 10));
     background-image: linear-gradient(
       var(--rotate)
